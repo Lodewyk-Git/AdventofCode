@@ -142,8 +142,6 @@ string calculateOxygen(vector<string> diagnosticList){
                     }
                 }
             }
-            std::cout << diagnosticList.size() << '\n';
-            std::cout << commonList.size() << '\n';
         diagnosticList = commonList;
         } 
     }
@@ -194,8 +192,6 @@ string calculateScrubber(vector<string> diagnosticList){
                     }
                 }
             }
-            std::cout << diagnosticList.size() << '\n';
-            std::cout << commonList.size() << '\n';
         diagnosticList = commonList;
         } 
     }
@@ -226,16 +222,13 @@ int main(){
 
     lifeSupport = binaryToDecimal(scrubberRate)*binaryToDecimal(oxygenRate);
 
-    std::cout << "gamma rate: "<< gammaRate << " epsilon rate: " 
+    cout << "gamma rate: "<< gammaRate << " epsilon rate: " 
     << calculateEpsilonRate(binaryList) << " power consumption: " 
     << powerConsumption << "\noxygen generator rating: "
     << oxygenRate << "\nCO2 scrubber rating: "
     << scrubberRate << " life support: "
     << lifeSupport
     << '\n';
-
-    std::cout << binaryToDecimal(oxygenRate) << " " << binaryToDecimal(scrubberRate);
 }
-//3808
-//287
+
 
