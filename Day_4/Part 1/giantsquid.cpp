@@ -42,6 +42,7 @@ vector<vector<pair<int,bool>>> checkNumber(vector<vector<pair<int,bool>>> Ballot
 
 int getBest(vector<vector<pair<int,bool>>> Ballot){ 
     int best, best2;
+
     for (int a = 0; a < 5; a++)
         {
             best = 0;
@@ -52,6 +53,11 @@ int getBest(vector<vector<pair<int,bool>>> Ballot){
                     best++;
                 if (Ballot[b][a].second == true)
                     best2++;
+
+                if ((best == 5) || (best2 == 5))
+                {
+                    return (best<best2 ? best2 : best);
+                }  
             }
         }
 
@@ -75,6 +81,17 @@ vector<int> getLotteryNumbers(string line){
     }
 
     return lotteryList;
+}
+
+void printBallot(vector<vector<pair<int,bool>>> Ballot){
+    for (int rows = 0; rows < Ballot.size(); rows++)
+    {
+            for (int columns = 0; columns < Ballot[rows].size(); columns++)
+            {
+                cout << Ballot[rows][columns].first << " {" << Ballot[rows][columns].second << "} ";
+            }
+            cout <<  "\n";
+    }
 }
 
 int main(){
@@ -111,7 +128,7 @@ int main(){
                     }
                     player->Ballot.push_back(ballotLine);
                 }
-                player->Number = playerCounter;
+                player->Number = playerCounter-1;
                 player->Winner = false;
                 player->bestline = 0;
                 Players.push_back(player);
@@ -139,6 +156,7 @@ int main(){
                 Players[d]->bestline = getBest(Players[d]->Ballot);
                 if (Players[d]->bestline >= 5){
                     cout << "Winner: " << d << '\n';
+                    cout << "lotteryNumber: " << lotteryList[c] << '\n';
                     winNumber = d;
                     Players[d]->Winner = winner = true;
                     break;
@@ -148,16 +166,7 @@ int main(){
                 break;         
     } 
 
-    Player b = *Players[winNumber];
-    for (int count = 0; count < 5; count++)
-    {
-        for (int i = 0; i < 5; i++)
-        {
-            cout << b.Ballot[count][i].first << ", " << b.Ballot[count][i].second << "  ";
-        }
-        cout << '\n';
-    }
-    
+    printBallot(Players[winNumber]->Ballot);
 
     vector<Player*>::iterator iter, end;
     for(iter = Players.begin(), end = Players.end() ; iter != end; ++iter) {
@@ -180,4 +189,3 @@ int main(){
 
 //10680
 // board 10
-// sum of numbers 1068
