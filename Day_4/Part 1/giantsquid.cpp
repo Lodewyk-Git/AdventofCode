@@ -169,9 +169,8 @@ int main(){
     printBallot(Players[winNumber]->Ballot);
 
     vector<Player*>::iterator iter, end;
-    for(iter = Players.begin(), end = Players.end() ; iter != end; ++iter) {
+    for(iter = Players.begin(), end = Players.end() ; iter != end; ++iter)
         delete (*iter);
-    }    
 }
 
 /*
