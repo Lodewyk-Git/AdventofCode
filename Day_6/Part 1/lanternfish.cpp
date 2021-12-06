@@ -64,4 +64,8 @@ int main(){
     }
        
     cout << AllFish.size();
+
+    vector<LanternFish*>::iterator iter, end;
+    for(iter = AllFish.begin(), end = AllFish.end() ; iter != end; ++iter)
+        delete (*iter);
 }
