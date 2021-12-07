@@ -7,15 +7,17 @@
 
 using namespace std;
 
-int median(vector<int> v) {  // https://www.geeksforgeeks.org/stdnth_element-in-cpp/
-    int n = v.size() / 2;
-    nth_element(v.begin(), v.begin()+n, v.end());
-    return v[n];
+int median(vector<int> v) { //middle value of ordered array  Size +1 /2 //thus sorting order does not matter
+    
+    int n = v.size() / 2; // element in middle
+    sort(v.begin(), v.end(), greater<int>()); // sort in desc order https://www.geeksforgeeks.org/how-to-sort-a-vector-in-descending-order-using-stl-in-c/
+
+        return v[n];
 } // https://www.mathsisfun.com/median.html
 
 int main(){
 
-    ifstream file("values.txt");
+    ifstream file("../values.txt");
     string line;
     char comma;
     int Temp;
