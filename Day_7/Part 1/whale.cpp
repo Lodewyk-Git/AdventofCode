@@ -3,7 +3,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
-#include <algorithm>
+#include <algorithm> // to use sort
 
 using namespace std;
 
@@ -39,5 +39,5 @@ int main(){
         sum += abs(c - m);
     }
 
-	cout << "Fuel Spent: " << sum << std::endl;
+	cout << "Fuel Spent: " << sum << '\n';
 }
