@@ -39,7 +39,7 @@ vector<LanternFish*> nextDay(vector<LanternFish*> FishList){
 
 int main(){
 
-    ifstream file("values.txt");
+    ifstream file("../values.txt");
     string line;
     char comma;
     int Temp, days;

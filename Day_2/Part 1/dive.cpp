@@ -8,7 +8,7 @@ using namespace std;
 
 int main(){
 
-    ifstream file("values.txt");
+    ifstream file("../values.txt");
     string line;
     string direction;
     int movement;

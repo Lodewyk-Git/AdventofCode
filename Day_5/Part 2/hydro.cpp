@@ -130,7 +130,7 @@ bool isBL(pair<int,int> Original, pair<int,int> Changed, vector<vector<pair<int,
 */
 int main(){
 
-    ifstream file("values.txt");
+    ifstream file("../values.txt");
     string line;
     int x1, x2, y1, y2;
     char junk;

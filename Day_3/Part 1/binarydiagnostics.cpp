@@ -26,7 +26,7 @@ int binaryToDecimal(string n)
 
 int main(){
 
-    ifstream file("values.txt");
+    ifstream file("../values.txt");
     string line, gammaRate, epsilonRate;
     int powerConsumption;
     vector<string> binaryList;

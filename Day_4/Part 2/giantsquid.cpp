@@ -96,7 +96,7 @@ void printBallot(vector<vector<pair<int,bool>>> Ballot){
 
 int main(){
 
-    ifstream file("values.txt");
+    ifstream file("../values.txt");
     string line;
     int playerCounter;
     vector<int> lotteryList;

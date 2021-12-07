@@ -25,7 +25,7 @@ pair<int, int> getCsvInt(string input) {
 
 int main(int argc,  char** argv) {
     fstream file;
-    file.open("values.txt", ios::in);
+    file.open("../values.txt", ios::in);
     if(!file || !file.is_open()) {
         printf("skill issue. File not found\n");
         return 1;

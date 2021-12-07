@@ -5,7 +5,7 @@
 
 int main() {
     
-    std::ifstream file("values.txt");
+    std::ifstream file("../values.txt");
     std::string line;
 
     int CurrentNumber;

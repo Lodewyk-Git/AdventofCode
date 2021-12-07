@@ -11,7 +11,7 @@ int TotalFish;
 
 int main(){
 
-    ifstream file("values.txt");
+    ifstream file("../values.txt");
     string line;
     char comma;
     int Timer, days;

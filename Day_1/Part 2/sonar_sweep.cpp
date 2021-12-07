@@ -6,7 +6,7 @@
 
 int main() {
     
-    std::ifstream file("values.txt");
+    std::ifstream file("../values.txt");
     std::string line;
     std::vector<int> numbers;
     
@@ -47,6 +47,6 @@ int main() {
             }
             PreviousNumber = CurrentNumber;
         }
-        std::cout << Total;
+        std::cout << "Sums larger than previous sum: " << Total;
     };
 }

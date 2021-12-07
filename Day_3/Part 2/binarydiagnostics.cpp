@@ -201,7 +201,7 @@ string calculateScrubber(vector<string> diagnosticList){
 
 int main(){
 
-    ifstream file("values.txt");
+    ifstream file("../values.txt");
     string line, gammaRate, epsilonRate, oxygenRate, scrubberRate;
     int powerConsumption, lifeSupport;
     vector<string> binaryList;
