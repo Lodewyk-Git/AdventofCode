@@ -32,11 +32,12 @@ int main(){
             }
         }
     }
-    int m = median(AllCrabs);
+    int m = median(AllCrabs); // get middle of sorted Crablist
     int sum = 0;
 
-    for ( int c : AllCrabs ) {
-        sum += abs(c - m);
+    //crab moves amount of steps == to difference between starting point and best point (middle when arr is sorted) 
+    for ( int c : AllCrabs ) { // for every value in Crab
+        sum += abs(c - m); // add difference between middle and current crab value
     }
 
 	cout << "Fuel Spent: " << sum << '\n';
